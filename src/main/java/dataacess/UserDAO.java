@@ -81,12 +81,12 @@ public class UserDAO {
                 System.err.println("Username or Password is incorrect.");
             } else {
                 System.err.println("Login success. Welcome to Hentaiz. Enjoy your day!!!");
-                String url = "https://ihentai.de/"; 
+                /*String url = "https://ihentai.de/"; 
                 try {
                     Desktop.getDesktop().browse(new URI(url));
                 } catch (IOException | URISyntaxException e) {
                     e.printStackTrace();
-                }
+                }*/
             }
             
         }
@@ -97,7 +97,7 @@ public class UserDAO {
 
     //write new account to data
     public void addAccountData(String username, String password) {
-        File file = new File("src\\main\\java\\user.dat");
+        File file = new File("src\\user.dat");
         try {
             FileWriter fileWriter = new FileWriter(file, true);
             fileWriter.write(username + ";" + password + "\n");
@@ -110,7 +110,7 @@ public class UserDAO {
 
     //get password by username
     public String passwordByUsername(String username) {
-        File file = new File("src\\main\\java\\user.dat");
+        File file = new File("src\\user.dat");
         try {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);

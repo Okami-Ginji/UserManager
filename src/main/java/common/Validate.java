@@ -7,10 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
- *
- * @author THAYCACAC
- */
 public class Validate {
 
     private final static String VALID_USERNAME = "^\\S{5}\\S*$";
@@ -18,7 +14,7 @@ public class Validate {
 
     //check file data exist or not
     public boolean checkFileExist() {
-        File file = new File("src\\main\\java\\user.dat");
+        File file = new File("src\\user.dat");
         if (!file.exists()) {
             try {
                 System.err.println("File not exist!!!");
@@ -64,7 +60,7 @@ public class Validate {
 
     //check username exist
     public boolean checkUsernameExist(String username) {
-        File file = new File("src\\main\\java\\user.dat");
+        File file = new File("src\\user.dat");
         try {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
